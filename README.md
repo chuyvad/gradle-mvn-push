@@ -1,4 +1,4 @@
-gradle-local-mvn-push
+gradle-mvn-push
 ===============
 
 This work is forked from Chris Bane's [gradle-mvn-push](https://github.com/chrisbanes/gradle-mvn-push). Thank's to Crhis for his work, as it really saved me a lot of hours. You're my hero :)
@@ -15,6 +15,8 @@ Modify (or create) the file  `USER_HOME/.gradle/gradle.properties` to include th
 
 ```properties
 REPOSITORY_PATH = file://path/to/your/repo
+REPOSITORY_USERNAME = user@domain.com
+REPOSITORY_PASSWORD = 1234
 ```
 Be sure you don't include the / at the end of the path
 
@@ -54,7 +56,7 @@ POM_PACKAGING=aar
 Add the following at the end of the `build.gradle` for each module you wish to upload:
 
 ```groovy
-apply from: 'https://raw.github.com/sergiandreplace/gradle-local-mvn-push/master/gradle-local-mvn-push.gradle'
+apply from: 'https://raw.githubusercontent.com/chuyvad/gradle-mvn-push/master/gradle-local-mvn-push.gradle'
 ```
 
 ### 4. Build and Push
@@ -68,7 +70,7 @@ Note for Windows users: remember that if you are using the graddle wrapper, you 
 
 ## License
 
-    Copyright 2014 Sergi Martínez
+    Copyright 2014 Vadillo Leon
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
