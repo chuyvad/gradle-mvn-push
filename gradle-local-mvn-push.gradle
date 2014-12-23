@@ -33,7 +33,7 @@ afterEvaluate { project ->
                 pom.artifactId = POM_ARTIFACT_ID
                 pom.version = VERSION_NAME
 
-                repository(url: REPOSITORY_PATH + "/release"){
+                repository(url: REPOSITORY_PATH){
 					authentication(userName: REPOSITORY_USERNAME, password: REPOSITORY_PASSWORD)
 				}
                 snapshotRepository(url: REPOSITORY_PATH + "/snapshot"){
